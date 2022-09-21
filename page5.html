@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<title> AMONG US
+	</title>
+	
+	<meta charset="utf-8">
+	<meta name="description" content="Among us website.Registration page">
+	<meta name="keyword" content="Among us,contact,register,registeration">
+	
+	<link rel="stylesheet" href="Assets/CSS/site.css">
+	<script src="Assets/Scripts/site.js"></script>
+</head>
+
+<body>
+	<header>
+	<hr>
+		<div>
+			<a href="index.html"><img id="logo" src="Assets/Images/logo.png" alt="logos"></a>
+			<h1 id="bigtitle"> AMONG US </h1>
+		</div>
+		<hr>
+		<div>
+			<nav >
+				<ul>
+					<li><a href="index.html" class="active">HOMEPAGE</a></li>
+					<li><a href="page2.html">MAPS</a></li>
+					<li><a href="page3.html">CHARACTERS</a></li>
+					<li><a href="page4.html">TASKS</a></li>
+					<li><a href="page5.html">CONTACT US</a></li>
+				</ul>
+			</nav>
+		</div>	
+		<hr>
+	</header>
+	
+	<div id="contact">
+		<section>
+			<h3 class="title"> Contacting us and registering </h3>
+			
+			<form action="#" method="post" name="contactForm" onsubmit="return(validate());">
+				<div>
+					<label> 
+						<span> First name:</span><span class="errorMessage" id="firstnameMessage"></span>
+						<input type="text" name="fname"  />
+					</label>
+				</div>
+				
+				<div>
+					<label> 
+						<span>Last name:</span><span class="errorMessage" id="lastnameMessage"></span>
+						<input type="text" name="lname" />
+					</label>
+				</div>
+				
+				<div>
+					<label>
+						<span>Email:</span><span class="errorMessage" id="emailMessage"></span>
+						<input type="email" name="email" />
+					</label>
+				</div>
+				
+				<div>
+					<label> 
+						<span>Password:</span>
+						<input type="password" name="password" required/>
+					</label>
+				</div>	
+				
+				<div>
+					<label> 
+						<span>Birthday:</span>
+						<input type="date" name="birthday" required/>
+					</label>
+				</div>
+				
+				<hr>
+				
+				<div>
+					<label> Gender:</label>
+					<input type="radio" name="category" value="male" />Male 
+					<input type="radio" name="category" value="female"/> Female
+					<input type="radio" name="category" value="other" checked/> Other
+						<input type="text" name="gender_category"/>
+				</div>
+				
+				<hr>
+				
+				<div>
+					<label>How did you hear about us? (Please check all that applies to you)</label>
+					<input type="checkbox" name="method" value="Social media influencers" /> Social media influencer
+					<input type="checkbox" name="method" value="Advertisement" /> Advertisement 
+					<input type="checkbox" name="method" value="Friends" /> Friends
+				</div>
+				
+				<hr>
+				
+				<div>
+					<label>Which continent are you from?</label>
+					<select>
+						<option value="asia"> Asia </option>
+						<option value="europe"> Europe </option>
+						<option value="africa"> Africa </option>
+						<option value="northamerica"> North America </option>
+						<option value="southamerica"> South America </option>
+						<option value="australia"> Australia </option>
+						<option value="antartica"> Antartica </option>
+					</select>
+				</div>
+				
+				<hr>
+				
+				<label> Message for us...</label><textarea ></textarea> 
+				<button type="submit"> Submit </button>	
+				
+			</form>
+			
+		</section>
+		
+	</div>
+	
+	<div id="main">
+		<h1 class="title"> Let's test your knowledge about the game !</h1>
+		<button onclick="setQuestion(0);"> Q1 </button>
+		<button onclick="setQuestion(1);"> Q2 </button>
+		<button onclick="setQuestion(2);"> Q3 </button>
+		<button onclick="setQuestion(3);"> Q4 </button>
+		<button onclick="setQuestion(4);"> Q5 </button>
+		
+		<h3 id="question"> Question	</h3>	
+		<label>
+			<span class="subtitle"> Enter your answer </span>
+			<input type="text" id="answer" required>
+		</label>
+		
+		<h3 id="correct"> :) </h3>
+		
+		<button onclick="checkAnswer();">Submit</button>
+	</div>
+
+	<div class="pagination">
+	  <a href="page4.html">&laquo;</a>
+	  <a href="index.html">1</a>
+	  <a href="page2.html">2</a>
+	  <a href="page3.html">3</a>
+	  <a href="page4.html">4</a>
+	  <a href="page5.html" class="active">5</a>
+
+	</div>
+
+	<footer>
+		© 2020 Raghd Al Juma, Among us info Page. Non profitable, Unpublished website :).
+	</footer>
+
+</body>
+</html>
